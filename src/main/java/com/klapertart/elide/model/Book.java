@@ -2,6 +2,8 @@ package com.klapertart.elide.model;
 
 import com.yahoo.elide.annotation.Include;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,9 +15,10 @@ import javax.persistence.Id;
  * @since 17/07/24
  */
 
-@Entity(name = "book")
+@Entity
 @Include(name = "book")
-@Data
+@Getter
+@Setter
 public class Book {
 
     @Id

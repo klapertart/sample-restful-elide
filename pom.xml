@@ -65,17 +65,21 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>com.yahoo.elide</groupId>
 			<artifactId>elide-standalone</artifactId>
 			<version>5.0.0</version>
 		</dependency>
-
-		<!-- Elide Spring Boot Starter -->
 		<dependency>
 			<groupId>com.yahoo.elide</groupId>
 			<artifactId>elide-spring-boot-starter</artifactId>
 			<version>5.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.yahoo.elide</groupId>
+			<artifactId>elide-core</artifactId>
+			<version>5.0.0</version> <!-- Replace with the appropriate version -->
 		</dependency>
 
 	</dependencies>
