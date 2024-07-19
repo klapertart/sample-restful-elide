@@ -17,11 +17,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-                .authorizeRequests()
-                .antMatchers("/json/book").permitAll()  // Allow unrestricted access to /json/book
-                .antMatchers("/json/book/*").permitAll()  // Allow unrestricted access to /json/book
-                .and()
-                .csrf().disable()
-                .httpBasic();
+            .authorizeRequests()
+            .antMatchers("/api/*").permitAll()  // Allow unrestricted access to /json/book
+            .and()
+            .csrf().disable()
+            .httpBasic();
     }
 }

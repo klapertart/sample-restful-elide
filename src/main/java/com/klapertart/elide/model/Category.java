@@ -3,20 +3,17 @@ package com.klapertart.elide.model;
 import com.yahoo.elide.annotation.Include;
 
 import javax.persistence.*;
-
-/**
- * @author kurakuraninja
- * @since 17/07/24
- */
+import java.util.List;
 
 @Entity
-@Include(name = "book")
-public class Book {
+@Include(name = "category")
+public class Category{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String title;
+    private String name;
 
-    private String author;
+    @OneToMany(mappedBy = "category")
+    private List<Product> products;
 }

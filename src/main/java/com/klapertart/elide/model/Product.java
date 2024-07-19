@@ -4,19 +4,20 @@ import com.yahoo.elide.annotation.Include;
 
 import javax.persistence.*;
 
-/**
- * @author kurakuraninja
- * @since 17/07/24
- */
 
 @Entity
-@Include(name = "book")
-public class Book {
+@Include(name = "product")
+public class Product {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String title;
+    private String name;
 
-    private String author;
+    private Double price;
+
+    @ManyToOne
+    @JoinColumn(name = "category_id",nullable = false)
+    private Category category;
 }
