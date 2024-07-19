@@ -17,8 +17,6 @@ import javax.persistence.Id;
 
 @Entity
 @Include(name = "book")
-@Getter
-@Setter
 public class Book {
 
     @Id
