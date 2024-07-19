@@ -1,6 +1,8 @@
 package com.klapertart.elide.model;
 
+import com.yahoo.elide.annotation.CreatePermission;
 import com.yahoo.elide.annotation.Include;
+import com.yahoo.elide.annotation.ReadPermission;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
